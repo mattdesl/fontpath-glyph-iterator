@@ -1,0 +1,31 @@
+{
+  "name": "fontpath-glyph-iterator",
+  "version": "0.0.0",
+  "description": "used for positioning glyphs and determining their size",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattdesl/fontpath-glyph-iterator"
+  },
+  "keywords": [
+    "glyph",
+    "font",
+    "fontpath",
+    "rendering",
+    "text",
+    "ttf",
+    "otf"
+  ],
+  "author": "Matt DesLauriers",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mattdesl/fontpath-glyph-iterator/issues"
+  },
+  "homepage": "https://github.com/mattdesl/fontpath-glyph-iterator",
+  "dependencies": {
+    "fontpath-util": "^1.0.0"
+  }
+}

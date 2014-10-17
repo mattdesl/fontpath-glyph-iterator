@@ -1,6 +1,6 @@
 {
   "name": "fontpath-glyph-iterator",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "used for positioning glyphs and determining their size",
   "main": "index.js",
   "scripts": {

@@ -26,6 +26,6 @@
   },
   "homepage": "https://github.com/mattdesl/fontpath-glyph-iterator",
   "dependencies": {
-    "fontpath-util": "^1.0.0"
+    "fontpath-util": "^2.0.0"
   }
 }

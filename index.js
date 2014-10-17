@@ -9,7 +9,7 @@ function GlyphIterator(font, fontSize) {
     this.kerning = true;
     this.lineHeight = undefined;
 
-    this.fontSize = fontSize;
+    this.fontSize = typeof fontSize === 'number' ? fontSize : font.size;
     this.font = font;
 
     //Number of spaces for a tab character

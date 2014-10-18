@@ -4,12 +4,15 @@ var DEFAULT_TAB_WIDTH = 4;
 
 function GlyphIterator(font, fontSize) {
     this._fontSize = undefined;
+    this._fontScale = undefined;
     this._font = undefined;
     this.fontScale = 1.0;
     this.kerning = true;
     this.lineHeight = undefined;
-
-    this.fontSize = typeof fontSize === 'number' ? fontSize : font.size;
+    
+    this.fontSize = typeof fontSize === 'number'
+            ? fontSize
+            : (font ? font.size : undefined);
     this.font = font;
 
     //Number of spaces for a tab character
@@ -63,6 +66,10 @@ Object.defineProperty(GlyphIterator.prototype, "tabWidth", {
 
 Object.defineProperty(GlyphIterator.prototype, "fontSize", {
     get: function() {
+        if (typeof this._fontSize !== 'number')
+            return this.font.bitmap 
+                ? this.font.size 
+                : util.pointToPixel(this.font.size)
         return this._fontSize;
     },
 

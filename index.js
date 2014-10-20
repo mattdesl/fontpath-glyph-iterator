@@ -8,6 +8,7 @@ function GlyphIterator(font, fontSize) {
     this._font = undefined;
     this.fontScale = 1.0;
     this.kerning = true;
+    this.letterSpacing = 0;
     this.lineHeight = undefined;
     
     this.fontSize = typeof fontSize === 'number'
@@ -189,7 +190,7 @@ GlyphIterator.prototype.advanceLine = function() {
 GlyphIterator.prototype.advance = function(glyph) {
     var advance = (glyph.xoff * this.fontScale);
     // Advance to next pen position
-    this.pen.x += advance;
+    this.pen.x += advance + this.letterSpacing;
     return advance;
 };
 
